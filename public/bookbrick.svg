@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" width="500" height="150" role="img" aria-labelledby="title desc">
+  <title id="title">BookBrick Logo</title>
+  <desc id="desc">Friendly open book logo with a single brick motif, next to the text BookBrick.</desc>
+
+  <!-- Icon: open book with one brick accent -->
+  <g transform="translate(0,15)">
+    <!-- Left page -->
+    <path d="M10 0 Q80 20 80 90 Q40 80 10 100 Z" fill="#E2725B"/>
+    <!-- Right page -->
+    <path d="M150 0 Q80 20 80 90 Q120 80 150 100 Z" fill="#E2725B"/>
+    <!-- Brick accent on right page -->
+    <rect x="95" y="35" width="30" height="18" rx="3" fill="#F6E3D3"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="190" y="75" font-family="Poppins, Segoe UI, sans-serif" font-size="46" font-weight="600" fill="#222">
+    Book<tspan fill="#E2725B">Brick</tspan>
+  </text>
+  <text x="190" y="105" font-family="Poppins, Segoe UI, sans-serif" font-size="16" fill="#666">
+    book club
+  </text>
+</svg>
