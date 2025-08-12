@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { BookInterface } from "@/models/BookInterface";
 
-function BookCard({ book }) {
+function BookCard({ book }: { book: BookInterface }) {
   return (
     <div className="flex card card-border lg:card-side bg-base-100 shadow-smshadow-sm mb-5">
       <figure className="w-1/6">

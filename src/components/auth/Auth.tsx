@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { createUserWithEmailAndPassword } from "@firebase/auth";
 import { auth } from "@/utils/firebase.browser";
 
@@ -10,19 +10,19 @@ function Auth() {
   const [passwordTwo, setPasswordTwo] = useState("123123");
   const [error, setError] = useState(null);
 
-  function handleOnChangeEmail(e) {
+  function handleOnChangeEmail(e: ChangeEvent<HTMLInputElement>) {
     setEmail(e.target.value);
   }
 
-  function handleOnPassOne(e) {
+  function handleOnPassOne(e: ChangeEvent<HTMLInputElement>) {
     setPasswordOne(e.target.value);
   }
 
-  function handleOnPassTwo(e) {
+  function handleOnPassTwo(e: ChangeEvent<HTMLInputElement>) {
     setPasswordTwo(e.target.value);
   }
 
-  const onSubmit = (event) => {
+  const onSubmit = (event: any) => {
     event.preventDefault();
     setError(null);
     //check if passwords match. If they do, create user in Firebase

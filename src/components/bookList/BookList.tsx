@@ -1,5 +1,6 @@
 import { db } from "@/utils/firebase.admin";
 import BookCard from "@/components/bookCard/BookCard";
+import { BookInterface } from "@/models/BookInterface";
 
 async function loadBooks(): Promise<any> {
   const snapshot = await db.collection("books").get();
@@ -12,7 +13,7 @@ async function loadBooks(): Promise<any> {
 }
 
 async function BookList() {
-  const books = await loadBooks();
+  const books: BookInterface[] = await loadBooks();
   return (
     <section>
       {books.map((book) => {
