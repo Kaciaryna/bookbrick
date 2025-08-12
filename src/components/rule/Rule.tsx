@@ -1,4 +1,6 @@
-function Rule({ rule }) {
+import { RuleInterface } from "@/models/RuleInterface";
+
+function Rule({ rule }: { rule: RuleInterface }) {
   return (
     <li className="list-row">
       <div>
