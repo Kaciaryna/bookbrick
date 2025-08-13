@@ -25,14 +25,14 @@ function BookCard({ book }: { book: BookInterface }) {
           {book.genres &&
             book.genres.map((genre) => {
               return (
-                <div key={genre} className="badge badge-soft badge-info">
+                <div key={genre} className="badge badge-secondary">
                   {genre}
                 </div>
               );
             })}
         </div>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Details</button>
+          <button className="btn btn-secondary">Details</button>
         </div>
       </div>
     </div>

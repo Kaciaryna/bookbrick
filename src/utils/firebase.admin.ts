@@ -1,5 +1,7 @@
 import admin, { ServiceAccount } from "firebase-admin";
 import { getStorage } from "firebase-admin/storage";
+import { getAuth } from "firebase/auth";
+import { app } from "@/utils/firebase.browser";
 
 const serviceAccount: ServiceAccount = {
   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
@@ -27,5 +29,6 @@ const firebaseAdmin = getFirebaseAdmin();
 const bucket = getStorage(firebaseAdmin.app).bucket();
 
 const db = firebaseAdmin.admin.firestore();
+const auth = getAuth(app);
 
-export { firebaseAdmin, db, bucket };
+export { firebaseAdmin, db, bucket, auth };
