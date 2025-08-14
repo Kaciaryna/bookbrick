@@ -169,21 +169,17 @@ function Poll() {
         ))}
 
         <div className="join">
-          <div>
-            <label className="input validator join-item">
-              <input
-                ref={genreRef}
-                placeholder="novel"
-                type="text"
-                name="genres"
-                className="input"
-              />
-            </label>
-          </div>
+          <input
+            ref={genreRef}
+            placeholder="print genre and click add"
+            type="text"
+            name="genres"
+            className="input join-item"
+          />
           <button
             onClick={handleGenreClick}
             type="button"
-            className="btn btn-neutral join-item"
+            className="btn join-item btn-neutral join-item"
           >
             Add genre
           </button>

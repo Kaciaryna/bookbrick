@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en" data-theme="mytheme">
       <body className={raleway.className}>
         <NavBar />
-        <section className="w-5xl m-auto py-5">{children}</section>
+        <section className="lg:w-5xl m-auto py-5">{children}</section>
       </body>
     </html>
   );
