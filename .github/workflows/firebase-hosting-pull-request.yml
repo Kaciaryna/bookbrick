@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: create env file
+        run: |
+          touch .env
+          echo "${{secrets.TEST_SECRETS}}" >> .env
       - run: npm ci
       - run: npm run build && npm run export
       - uses: FirebaseExtended/action-hosting-deploy@v0
