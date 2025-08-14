@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`BookCard renders a book card 1`] = `
+<div>
+  <div
+    class="flex card card-border lg:card-side bg-base-100 shadow-smshadow-sm mb-5"
+  >
+    <figure
+      class="w-1/6"
+    >
+      <img
+        alt="Unknown book"
+        height="300"
+        src="/src/book.jpg"
+        width="250"
+      />
+    </figure>
+    <div
+      class="card-body w-5/6"
+    >
+      <h2
+        class="card-title"
+      >
+        Unknown book
+         by 
+        Unknown
+      </h2>
+      <p>
+        test book
+      </p>
+      <div
+        class="flex flex-row"
+      >
+        <div
+          class="badge badge-secondary"
+        >
+          novel
+        </div>
+      </div>
+      <div
+        class="card-actions justify-end"
+      >
+        <button
+          class="btn btn-secondary"
+        >
+          Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

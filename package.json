@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "export": "next export"
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^15.4.6",
@@ -21,14 +22,15 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@jest/globals": "^30.0.5",
     "@tailwindcss/postcss": "^4",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
     "eslint": "^9",
     "eslint-config-eslint": "^11.0.0",
     "eslint-config-next": "15.4.5",
