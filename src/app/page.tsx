@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import Auth from "@/components/auth/Auth";
-import { onAuthStateChanged } from "@firebase/auth";
-import { auth } from "@/utils/firebase.browser";
-import { useEffect, useState } from "react";
-import Loading from "@/components/loading/Loading";
+import Auth from '@/components/auth/Auth';
+import { onAuthStateChanged } from '@firebase/auth';
+import { auth } from '@/utils/firebase.browser';
+import { useEffect, useState } from 'react';
+import Loading from '@/components/loading/Loading';
 
 function HomePage() {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState('');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,14 +15,14 @@ function HomePage() {
       if (user) {
         const uid = user.uid;
         // ...
-        console.log("uid", uid);
+        console.log('uid', uid);
 
         setUser(uid);
         setLoading(false);
       } else {
         // User is signed out
         // ...
-        console.log("user is logged out");
+        console.log('user is logged out');
         setLoading(false);
       }
     });

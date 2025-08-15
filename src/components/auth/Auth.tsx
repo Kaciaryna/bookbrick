@@ -1,16 +1,14 @@
-"use client";
+'use client';
 
-import SignUp from "@/components/auth/SignUp";
-import SignIn from "@/components/auth/SignIn";
-import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "@firebase/auth";
-import { auth } from "@/utils/firebase.browser";
+import SignUp from '@/components/auth/SignUp';
+import SignIn from '@/components/auth/SignIn';
+import { useState } from 'react';
 
 function Auth() {
   const [showRegister, setShowRegister] = useState(true);
 
   return (
-    <div className="flex justify-center">
+    <div className='flex justify-center'>
       {showRegister ? (
         <SignUp toggleShow={setShowRegister} />
       ) : (

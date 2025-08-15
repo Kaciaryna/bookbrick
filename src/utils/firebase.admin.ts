@@ -1,5 +1,5 @@
-import admin, { ServiceAccount } from "firebase-admin";
-import { getStorage } from "firebase-admin/storage";
+import admin, { ServiceAccount } from 'firebase-admin';
+import { getStorage } from 'firebase-admin/storage';
 
 const serviceAccount: ServiceAccount = {
   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
@@ -7,7 +7,7 @@ const serviceAccount: ServiceAccount = {
   privateKey: process.env.FB_PRIVATE_KEY,
 };
 
-const databaseURL = "https://bookbrick.firebaseio.com";
+const databaseURL = 'https://bookbrick.firebaseio.com';
 
 export function getFirebaseAdmin() {
   let app;

@@ -1,22 +1,51 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import { FlatCompat } from '@eslint/eslintrc'
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-//
-// const eslintConfig = [
-//   ...compat.extends("next/core-web-vitals", "next/typescript", "eslint-config-eslint", "eslint-config-next", "prettier"),
-// ];
+  // import.meta.dirname is available after Node.js v20.11.0
+  baseDirectory: import.meta.dirname,
+})
 
 const eslintConfig = [
   ...compat.config({
-    extends: ['next/core-web-vitals', 'next/typescript', 'prettier'],
+    extends: [
+      'next',
+      'next/core-web-vitals',
+      'next/typescript',
+      'plugin:@next/next/recommended',
+      'plugin:prettier/recommended',
+      'plugin:jsx-a11y/recommended',
+    ],
+    plugins: ['prettier', 'jsx-a11y'],
+    rules: {
+      'prettier/prettier': [
+        'error',
+        {
+          trailingComma: 'all',
+          semi: true,
+          tabWidth: 2,
+          singleQuote: true,
+          jsxSingleQuote: true,
+          printWidth: 80,
+          endOfLine: 'auto',
+          arrowParens: 'always',
+          plugins: ['prettier-plugin-tailwindcss'],
+        },
+        {
+          usePrettierrc: true,
+        },
+      ],
+      'react/react-in-jsx-scope': 'off',
+      'jsx-a11y/alt-text': 'warn',
+      'jsx-a11y/aria-props': 'warn',
+      'jsx-a11y/aria-proptypes': 'warn',
+      'jsx-a11y/aria-unsupported-elements': 'warn',
+      'jsx-a11y/role-has-required-aria-props': 'warn',
+      'jsx-a11y/role-supports-aria-props': 'warn',
+      'jsx-a11y/label-has-associated-control': 'off',
+      'jsx-a11y/anchor-is-valid': 'off',
+      '@next/next/no-img-element': 'off'
+    },
   }),
 ]
 
-export default eslintConfig;
+export default eslintConfig
