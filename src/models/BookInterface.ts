@@ -9,11 +9,11 @@ export interface BookInterface {
 }
 
 export const emptyBook: BookInterface = {
-  id: "",
-  name: "",
-  author: "",
-  image: "",
+  id: '',
+  name: '',
+  author: '',
+  image: '',
   file: undefined,
-  description: "",
+  description: '',
   genres: [],
 };

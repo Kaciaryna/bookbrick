@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
-import "./globals.css";
-import NavBar from "@/components/navBar/NavBar";
+import { Metadata } from 'next';
+import { Raleway } from 'next/font/google';
+import './globals.css';
+import NavBar from '@/components/navBar/NavBar';
 
 const raleway = Raleway({
-  variable: "--font-raleway",
-  subsets: ["latin"],
+  variable: '--font-raleway',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Book-brick",
-  description: "Book club app",
+  title: 'Book-brick',
+  description: 'Book club app',
 };
 
 export default function RootLayout({
@@ -19,10 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="mytheme">
+    <html lang='en' data-theme='mytheme'>
       <body className={raleway.className}>
         <NavBar />
-        <section className="lg:w-5xl m-auto py-5">{children}</section>
+        <section className='m-auto py-5 lg:w-5xl'>{children}</section>
       </body>
     </html>
   );

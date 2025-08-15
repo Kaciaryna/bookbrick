@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "daisyui";
 
 @theme {
@@ -11,10 +11,10 @@
 }
 
 @plugin "daisyui/theme" {
-  name: "pastel";
+  name: 'pastel';
   default: true;
   prefersdark: false;
-  color-scheme: "light";
+  color-scheme: 'light';
   --color-base-100: oklch(100% 0 0);
   --color-base-200: oklch(98.462% 0.001 247.838);
   --color-base-300: oklch(92.462% 0.001 247.838);
@@ -36,7 +36,7 @@
   --color-error: oklch(80% 0.114 19.571);
   --color-error-content: oklch(50% 0.213 27.518);
   --radius-selector: 1rem;
-  --radius-field: 0.5rem;;
+  --radius-field: 0.5rem;
   --radius-box: 0.25rem;
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
@@ -44,4 +44,3 @@
   --depth: 0;
   --noise: 0;
 }
-

@@ -1,14 +1,14 @@
-import { RuleInterface } from "@/models/RuleInterface";
+import { RuleInterface } from '@/models/RuleInterface';
 
 function Rule({ rule }: { rule: RuleInterface }) {
   return (
-    <li className="list-row">
+    <li className='list-row'>
       <div>
-        <img className="size-10 rounded-box" src={rule.image} />
+        <img className='rounded-box size-10' src={rule.image} alt='cover' />
       </div>
       <div>
         <div>{rule.title}</div>
-        <div className="text-xs uppercase font-semibold opacity-60">
+        <div className='text-xs font-semibold uppercase opacity-60'>
           {rule.description}
         </div>
       </div>
